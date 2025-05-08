@@ -1,0 +1,236 @@
+/* Reset and Base Styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 15%;
+    text-align: center;
+}
+
+/* Header/Navigation Protection */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hamburger Menu Protection */
+/* .hamburger-menu,
+.hamburger-menu * {
+    all: unset;
+    box-sizing: border-box;
+}
+
+.hamburger-menu {
+    position: relative;
+    z-index: 1001 !important;
+} */
+
+/* Content Styles */
+.title {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    color: #EEEEEE;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+}
+
+.brief-description-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bgMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.games-description {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.descriptionVideo {
+    width: 50%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.games-text {
+    width: 50%;
+    padding: 0 1rem;
+    color: #111111;
+}
+
+.h3-we-are {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #0f066e;
+    letter-spacing: 3px;
+    margin: 0 0 1rem 0;
+}
+
+.palorant-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.brief-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.news-link {
+    display: inline-block;
+    color: #0f066e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-bottom: 20px;
+}
+
+.news-link:hover {
+    color: #ff4655;
+}
+
+.best-agent-container {
+    background-color: rgba(16, 27, 74, 0.95);
+    width: 100%;
+}
+
+/* .line {
+    border-top: 9px solid rgb(194, 182, 16);
+    border-bottom: 7px solid rgb(194, 182, 16);
+    width: 100%;
+    padding: 3px 0;
+} */
+
+.agent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.best-agent-image {
+    height: 400px;
+    width: auto;
+    max-width: 100%;
+}
+
+.texts-best-agent {
+    max-width: 400px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EEEEEE;
+}
+
+.h1-the-best-agent {
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+}
+
+.h3-vexen {
+    font-size: 1.7em;
+    margin: 0 0 1em 0;
+}
+
+.best-agent-description {
+    line-height: 1.6;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .overlay {
+        padding: 0 5%;
+        z-index: 1; /* Maintain z-index */
+    }
+    
+    .games-description {
+        flex-direction: column;
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    .descriptionVideo, .games-text {
+        width: 100%;
+    }
+    
+    .descriptionVideo {
+        margin-bottom: 1rem;
+    }
+    
+    .agent {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .best-agent-image {
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .h1-the-best-agent {
+        font-size: 2em;
+    }
+    
+    .h3-vexen {
+        font-size: 1.3em;
+    }
+
+    /* Ensure hamburger menu stays on top */
+    .hamburger-menu {
+        z-index: 1001 !important;
+    }
+}

@@ -1,0 +1,392 @@
+html, body {
+  margin: 0;
+  background-color: #0f1020;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #EEEEEE;
+}
+
+main {
+  padding-top: clamp(60px, 8vw, 80px);
+}
+
+.agents-hero {
+  position: relative;
+  height: clamp(250px, 40vh, 500px);
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+              url('../Assets/Image/Agents/agents-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  z-index: 2;
+  color: #fff;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  text-shadow: 0 0 20px rgba(255, 75, 43, 0.8);
+  letter-spacing: clamp(2px, 1vw, 5px);
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  letter-spacing: 2px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+}
+
+.role-filter {
+  gap: 15px;
+  background-color: rgba(16, 27, 74, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.role-btn {
+  text-transform: uppercase;
+  border: 2px solid #ff416c;
+  font-weight: 700;
+  background: transparent;
+  color: #EEEEEE;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: clamp(8px, 1vw, 10px) clamp(12px, 2vw, 20px);
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+}
+
+.role-btn:hover, 
+.role-btn.active {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+}
+
+.agents-grid {
+  display: grid;
+  background-color: #0f1020;
+  padding: clamp(1rem, 3vw, 3rem);
+  gap: clamp(15px, 2vw, 25px);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30vw, 300px), 1fr));
+}
+
+.agent-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transform: scale(calc(0.95 + (0.05 * var(--zoom-factor))));
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(16, 27, 74, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agent-card:hover {
+  box-shadow: 0 12px 25px rgba(255, 75, 43, 0.3);
+  transform: translateY(-8px);
+}
+
+.agent-image {
+  overflow: hidden;
+  height: clamp(200px, 25vw, 300px);
+  position: relative;
+}
+
+.agent-image img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.agent-card:hover .agent-image img {
+  transform: scale(1.05);
+}
+
+.agent-role {
+  border-radius: 15px;
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  padding: 4px 12px;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.agent-role.duelist,
+.role-tag.duelist {
+  background-color: rgba(255, 70, 70, 0.9);
+}
+
+.agent-role.initiator,
+.role-tag.initiator {
+  background-color: rgba(100, 200, 255, 0.9);
+  color: #0a0e2e;
+}
+
+.agent-role.controller,
+.role-tag.controller {
+  color: white;
+  background-color: rgba(150, 100, 255, 0.9);
+}
+
+.agent-role.sentinel,
+.role-tag.sentinel {
+  color: #0a0e2e;
+  background-color: rgba(100, 255, 150, 0.9);
+}
+
+.agent-info {
+  color: #EEEEEE;
+  padding: 15px;
+}
+
+.agent-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.agent-description {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 15px;
+  min-height: 40px;
+}
+
+.abilities {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  display: grid;
+  margin-top: 15px;
+}
+
+.ability {
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ability h4 {
+  color: #ff416c;
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+}
+
+.ability p {
+  color: #cccccc;
+  font-size: 0.7rem;
+}
+
+.agent-details {
+  position: relative;
+  min-height: 100vh;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #0a0e2e, #1a1a3a);
+}
+
+.details-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.details-image {
+  flex: 1;
+}
+
+.details-image img {
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.details-info {
+  flex: 1;
+  color: #EEEEEE;
+}
+
+.details-info h2 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #ff416c;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.details-info h1 {
+  margin-bottom: 15px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+}
+
+.role-tag {
+  padding: 4px 12px;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.quote {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #aaaaaa;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.bio {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+}
+
+.ability-full {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.ability-full h4 {
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  margin-bottom: 5px;
+  color: #ff416c;
+}
+
+.ability-full p {
+  font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+  line-height: 1.5;
+}
+
+.full-abilities {
+  grid-template-columns: 1fr;
+  display: grid;
+  gap: 15px;
+}
+
+.agents-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.agents-section.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .details-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .details-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --zoom-factor: 0.9;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .abilities {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --zoom-factor: 0.85;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .agent-image {
+    height: 250px;
+  }
+  
+  .agents-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .role-filter {
+    gap: clamp(8px, 1.5vw, 15px);
+    padding: clamp(1rem, 2vw, 2rem) 0;
+  }
+
+  .role-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .agents-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem;
+  }
+}

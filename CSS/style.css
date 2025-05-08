@@ -1,0 +1,345 @@
+@import url('../Assets/Fonts/Orbitron-VariableFont_wght.ttf');
+@import url('../Assets/Fonts/Oxanium-VariableFont_wght.ttf');
+@import url('../Assets/Fonts/Poppins-Regular.ttf');
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../Assets/Fonts/Orbitron-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url('../Assets/Fonts/Oxanium-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Assets/Fonts/Poppins-Regular.ttf');
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.news-link, .agent-news-link::after {
+    content: "→";
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.news-link:hover::after, .agent-news-link:hover::after {
+    transform: translateX(3px);
+}
+
+.navbar{
+    background: rgba(16, 27, 74, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex; 
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    padding: 1.2rem;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.nav-left{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    height: 100%;
+}
+
+.nav-mid{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-mid a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    padding: 10px 22px;
+    border-radius: 30px;
+    color: #EEEEEE;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-mid a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-mid a:hover::after{
+    width: 60%;
+}
+
+.nav-mid a:hover{
+    color:#ff4b2b;
+    transform: scale(1.05);
+}
+
+.nav-right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.language{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color:#EEEEEE;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.language:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.10);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.separator{
+    color: #EEEEEE;
+    font-size: x-large;
+}
+
+.main-button{
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#EEEEEE;
+    background:linear-gradient(135deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(225, 75, 43, 0.3);
+    letter-spacing: 1px;
+}
+
+.main-button:hover{
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(255, 75, 43, 0.4), 0 0 10px rgba(225, 75, 43, 0.5);
+}
+
+footer{
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.download-app{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.download-button{
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover{
+    background-color: #e03d00;
+}
+
+.follow-us{
+    padding: 0.4rem;
+}
+
+.social-media{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a img{
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover{
+    transform: scale(1.1);
+}
+
+.branding{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.branding img{
+    width: 200px;
+}
+
+.legal{
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-links{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li{
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a{
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+.esrb-rating{
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.esrb-rating ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.esrb-rating li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.esrb-rating img{
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.news-link, .agent-news-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff4655;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.news-link:hover, .agent-news-link:hover {
+    color: #ff8e5e;
+}
+
+.footer-links ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff4655;
+}
+
+.tactical-gallery {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch; 
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.tactical-gallery:active {
+    cursor: grabbing;
+}
+
+.gallery-track {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.gallery-track img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-track img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery-track img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-track img {
+        width: 200px;
+        height: 120px;
+    }
+}

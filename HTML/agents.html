@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Agents | Palorant</title>
+  <link rel="stylesheet" href="../CSS/agents.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/responsive.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="../Assets/Image/Home/PunchGiotGames.png" alt="Giot Games">
+        </div>
+        <ul class="nav-mid">
+            <li>
+              <a href="palorant.html">HOME</a>
+            </li>
+            <p class="separator">/</p>
+            <li>
+                <a href="agents.html">AGENTS</a>
+            </li>            
+            <p class="separator">/</p>
+            <li>
+                <a href="maps.html">MAPS</a>
+            </li>
+            <p class="separator">/</p>
+            <li>
+                <a href="news.html">NEWS</a>
+            </li>
+            <p class="separator">/</p>
+            <li>
+                <a href="report.html">REPORT</a>
+            </li>
+        </ul>
+        <div class="nav-right">
+          <img class="language" src="../Assets/Image/Home/language.png">
+          <button class="main-button">PLAY NOW</button>
+        </div>
+
+        <button class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="palorant.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="report.html">REPORT</a></li>
+            </ul>
+            <div class="mobile-nav-right">
+                <img class="language" src="../Assets/Image/Home/language.png">
+                <button class="main-button">PLAY NOW</button>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="agents-hero">
+      <div class="hero-overlay">
+        <h1>MEET THE AGENTS</h1>
+        <p>Select your operative and master their unique abilities</p>
+      </div>
+      <img class="hero-bg" src="../Assets/Image/Agents/meet-the-agents-BG.png" alt="Agents Background">
+    </section>
+
+    <section class="agent-roles">
+      <div class="role-filter">
+        <button class="role-btn active" data-role="all">ALL</button>
+        <button class="role-btn" data-role="duelist">DUELIST</button>
+        <button class="role-btn" data-role="initiator">INITIATOR</button>
+        <button class="role-btn" data-role="controller">CONTROLLER</button>
+        <button class="role-btn" data-role="sentinel">SENTINEL</button>
+      </div>
+    </section>
+
+    <section class="agents-grid">
+      <!-- Agent 1 - Cobalt -->
+      <div class="agent-card" data-role="duelist">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Cobalt.png" alt="Cobalt">
+          <div class="agent-role duelist">DUELIST</div>
+        </div>
+        <div class="agent-info">
+          <h3>Cobalt</h3>
+          <p class="agent-description">Master of shadows with high mobility and burst damage</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Shadow Dive</h4>
+              <p>Teleport short distance</p>
+            </div>
+            <div class="ability">
+              <h4>Phantom Strike</h4>
+              <p>Bonus damage attacks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent 2 -  Ember -->
+      <div class="agent-card" data-role="initiator">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Ember.png" alt="Ember">
+          <div class="agent-role initiator">INITIATOR</div>
+        </div>
+        <div class="agent-info">
+          <h3>Ember</h3>
+          <p class="agent-description">Flash specialist who blinds enemies</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Flashpoint</h4>
+              <p>Blinding projectile</p>
+            </div>
+            <div class="ability">
+              <h4>Radar Pulse</h4>
+              <p>Reveal enemy positions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent 3 - Lynx -->
+      <div class="agent-card" data-role="controller">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Lynx.png" alt="Lynx">
+          <div class="agent-role controller">CONTROLLER</div>
+        </div>
+        <div class="agent-info">
+          <h3>Lynx</h3>
+          <p class="agent-description">Cosmic manipulator with global presence</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Gravity Well</h4>
+              <p>Pull enemies together</p>
+            </div>
+            <div class="ability">
+              <h4>Nebula</h4>
+              <p>Smoke screen from stars</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent 4 - Specter -->
+      <div class="agent-card" data-role="sentinel">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Specter.png" alt="Specter">
+          <div class="agent-role sentinel">SENTINEL</div>
+        </div>
+        <div class="agent-info">
+          <h3>Specter</h3>
+          <p class="agent-description">Defensive specialist with fortifications</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Barrier Wall</h4>
+              <p>Create impassable wall</p>
+            </div>
+            <div class="ability">
+              <h4>Trapwire</h4>
+              <p>Reveal and slow enemies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent 5 - Ignis -->
+      <div class="agent-card" data-role="duelist">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Ignis.png" alt="Ignis">
+          <div class="agent-role duelist">DUELIST</div>
+        </div>
+        <div class="agent-info">
+          <h3>Ignis</h3>
+          <p class="agent-description">Close-range specialist with blade attacks</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Blade Fury</h4>
+              <p>Melee combo attacks</p>
+            </div>
+            <div class="ability">
+              <h4>Dash Slash</h4>
+              <p>Lunge forward with attack</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Agent 6 - Crimson -->
+      <div class="agent-card" data-role="initiator">
+        <div class="agent-image">
+          <img src="../Assets/Image/Agents/Crimson.png" alt="Crimson">
+          <div class="agent-role initiator">INITIATOR</div>
+        </div>
+        <div class="agent-info">
+          <h3>Crimson</h3>
+          <p class="agent-description">Sound-based recon and disruption expert</p>
+          <div class="abilities">
+            <div class="ability">
+              <h4>Sonic Boom</h4>
+              <p>Disorient enemies in area</p>
+            </div>
+            <div class="ability">
+              <h4>Echo Location</h4>
+              <p>Reveal moving enemies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="agent-details">
+      <div class="details-container">
+        <div class="details-image">
+          <img src="../Assets/Image/Agents/Cobalt-detail.png" alt="Cobalt Detailed">
+        </div>
+        <div class="details-info">
+          <h2>AGENT DETAILS</h2>
+          <h1>Cobalt</h1>
+          <div class="role-tag duelist">DUELIST</div>
+          <p class="quote">"Strike from the shadows, leave no trace."</p>
+          <p class="bio">Cobalt is a high-mobility duelist specializing in rapid engagements and disengagements. His abilities allow him to reposition quickly during fights, making him unpredictable and deadly in one-on-one combat situations.</p>
+          
+          <div class="full-abilities">
+            <div class="ability-full">
+              <h4>Q - SHADOW DIVE</h4>
+              <p>Teleport a short distance in the direction you're moving. Can be used while airborne.</p>
+            </div>
+            <div class="ability-full">
+              <h4>E - PHANTOM STRIKE</h4>
+              <p>Empowers your next 2 shots to deal 50% more damage but costs 20 health per shot.</p>
+            </div>
+            <div class="ability-full">
+              <h4>C - NIGHT SHROUD</h4>
+              <p>Become invisible for 3 seconds when standing still. Moving or attacking breaks the effect.</p>
+            </div>
+            <div class="ability-full">
+              <h4>X - SHADOW ASSAULT</h4>
+              <p>Gain 3 charges of Shadow Dive and Phantom Strike for 10 seconds. Kills refresh all charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="download-app">
+        <h3>Download Giot Mobile Companion App</h3>
+        <button class="download-button">Get the App</button>
+    </div>
+
+    <div class="social-media">
+      <p class="follow-us">Follow us:</p>
+      <div class="social-icons">
+        <a href="#" aria-label="YouTube"><img src="../Assets/Image/Home/youtube-icon.png" alt="YouTube"></a>
+        <a href="#" aria-label="Instagram"><img src="../Assets/Image/Home/instagram-icon.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="../Assets/Image/Home/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" aria-label="Discord"><img src="../Assets/Image/Home/discord-icon.png" alt="Discord"></a>
+      </div>
+    </div>
+      
+    <div class="branding">
+      <img src="../Assets/Image/Home/giot-games-logo.png" alt="Giot Games Logo">
+    </div>
+
+    <div class="legal">
+      <p>&copy; 2022-2025 Giot Games, Inc. GIOT GAMES, PALORANT, and their associated logos are trademarks, service marks, and/or registered trademarks of Giot Games, Inc.</p>
+      <p>Headquartered in Los Angeles, California, Giot has established Palorant as a competitive esports title, recognized for its strategic gameplay and precise gun mechanics.</p>
+    </div>
+
+    <div class="footer-links">
+      <nav aria-label="Footer Links">
+        <ul>
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Term of Service</a></li>
+          <li><a href="#">Cookie Preferences</a></li>
+        </ul>
+      </nav>  
+    </div>
+
+    <div class="esrb-rating">
+      <img src="../Assets/Image/Home/esrb-rating.png" alt="ESRB Teen Rating">
+      <ul>
+        <li>Blood</li>
+        <li>Language</li>
+        <li>Violence</li>
+        <li>Users Interact</li>
+        <li>In-Game Purchase</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../JS/responsive-navbar.js"></script>
+  <script src="../JS/agents.js"></script>
+</body>
+</html>

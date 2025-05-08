@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f1923;
+    color: #ece8e1;
+    margin: 0;
+    padding: 0;
+}
+
+.report-section{
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #1a1a2e;
+    border: 1px solid #ff4655;
+    border-radius: 2px;
+}
+
+h2 {
+    color: #ece8e1;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: #ece8e1;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0f1923;
+    border: 1px solid #0f3460;
+    border-radius: 4px;
+    color: #ece8e1;
+    margin-bottom: 0.3rem;
+}
+
+.error {
+    color: #ff4655;
+    font-size: 0.8rem;
+    display: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    text-transform: none;
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff4655;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+}
